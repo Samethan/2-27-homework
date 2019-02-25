@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class FIREBAT {
+    private String name;
+    private String life;
+    private String strength;
+    private String defence;
+
+    public void setName(String newName){
+        this.name=newName;
+    }
+    public String getName(){
+    return this.name;
+    }
+    public void setLife(String newLife){
+        this.life=newLife;
+    }
+    public String getLife(){
+        return this.life;
+    }
+    public void setStrength(String newStrength){
+        this.strength=newStrength;
+    }
+    public String getStrength(){
+        return this.strength;
+    }
+     public void setDefence(String newDefence){
+        this.defence=newDefence;
+     }
+     public String getDefence(){
+        return this.defence;
+     }
+
+
+}
