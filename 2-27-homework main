@@ -1,0 +1,148 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+//              單位
+        FIREBAT as = new FIREBAT();
+        as.setName("火焰兵1");
+        as.setLife("98");
+        as.setDefence("45");
+        as.setStrength("7");
+
+        FIREBAT ad = new FIREBAT();
+        ad.setName("火焰兵2");
+        ad.setLife("97");
+        ad.setDefence("9");
+        ad.setStrength("77");
+
+        FIREBAT af = new FIREBAT();
+        af.setName("火焰兵3");
+        af.setLife("9");
+        af.setDefence("78");
+        af.setStrength("2");
+
+        FIREBAT ag = new FIREBAT();
+        ag.setName("火焰兵4");
+        ag.setLife("297");
+        ag.setDefence("223");
+        ag.setStrength("77");
+
+        FIREBAT ah = new FIREBAT();
+        ah.setName("火焰兵5");
+        ah.setLife("77");
+        ah.setStrength("47");
+        ah.setDefence("41");
+//   程式
+        boolean flag=true;
+
+        while (flag) {
+            System.out.println("1. 設定物件名稱");
+            System.out.println("2. 顯示物件資訊");
+            System.out.println("3. 結束程式");
+            int n=scn.nextInt();
+            switch (n) {
+//                設定物件名稱
+                case 1:
+                    boolean flag1=true;
+                    System.out.println("請輸入編號 (0～4): ");
+                    int n1=scn.nextInt();
+                    if (n1==0) {
+                        System.out.println("請輸入名稱: ");
+                        as.setName(scn.next());
+                        System.out.println("修改完成");
+                        System.out.println("繼續請按(Y/y),按其他鍵離開");
+                    }
+                    if (n1==1) {
+                        System.out.println("請輸入名稱: ");
+                        ad.setName(scn.next());
+                        System.out.println("修改完成");
+                        System.out.println("繼續請按(Y/y),按其他鍵離開");
+                    }
+                    if (n1==2) {
+                        System.out.println("請輸入名稱: ");
+                        af.setName(scn.next());
+                        System.out.println("修改完成");
+                        System.out.println("繼續請按(Y/y),按其他鍵離開");
+                    }
+                    if (n1==3) {
+                        System.out.println("請輸入名稱: ");
+                        ag.setName(scn.next());
+                        System.out.println("修改完成");
+                        System.out.println("繼續請按(Y/y),按其他鍵離開");
+                    }
+                    if (n1==4) {
+                        System.out.println("請輸入名稱: ");
+                        ah.setName(scn.next());
+                        System.out.println("修改完成");
+                        System.out.println("繼續請按(Y/y),按其他鍵離開");
+                    }
+                    String str=scn.next();
+                    if (str.equals("Y")||str.equals("y")){
+                        flag1=true;
+                    }else {
+                        flag1=false;
+                    }
+
+                 break;
+//               顯示物件資訊
+                case 2:
+                    boolean flag2=true;
+                    System.out.println("請輸入編號 (0～4) :");
+                    int nn = scn.nextInt();
+
+                    if (nn == 0) {
+                        System.out.println("名稱: " + as.getName());
+                        System.out.println("生命值: " + as.getLife());
+                        System.out.println("攻擊力: " + as.getStrength());
+                        System.out.println("防護力: " + as.getDefence());
+                    }
+
+
+                    if (nn == 1) {
+
+                        System.out.println("名稱: " + ad.getName());
+                        System.out.println("生命值: " + ad.getLife());
+                        System.out.println("攻擊力: " + ad.getStrength());
+                        System.out.println("防護力: " + ad.getDefence());
+                    }
+
+
+                    if (nn == 2) {
+                        System.out.println("名稱: " + af.getName());
+                        System.out.println("生命值: " + af.getLife());
+                        System.out.println("攻擊力: " + af.getStrength());
+                        System.out.println("防護力: " + af.getDefence());
+                    }
+
+
+                    if (nn == 3) {
+                        System.out.println("名稱: " + ag.getName());
+                        System.out.println("生命值: " + ag.getLife());
+                        System.out.println("攻擊力: " + ag.getStrength());
+                        System.out.println("防護力: " + ag.getDefence());
+                    }
+
+                    if (nn == 4) {
+                        System.out.println("名稱: " + ah.getName());
+                        System.out.println("生命值: " + ah.getLife());
+                        System.out.println("攻擊力: " + ah.getStrength());
+                        System.out.println("防護力: " + ah.getDefence());
+                    }
+                    System.out.println("繼續請按(Y/y),按其他鍵離開");
+                    String str1=scn.next();
+                    if (str1.equals("Y")||str1.equals("y")){
+                        flag2=true;
+                    }else {
+                        flag2=false;
+                    }
+                    break;
+//                 結束程式
+                case 3:
+                    flag=false;
+            }
+        }
+    }
+}
+
